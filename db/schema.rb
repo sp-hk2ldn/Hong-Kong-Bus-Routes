@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407145138) do
+ActiveRecord::Schema.define(version: 20150407150653) do
+
+  create_table "details", force: true do |t|
+    t.integer  "stop_number"
+    t.string   "stop_name"
+    t.string   "stop_location"
+    t.string   "area"
+    t.string   "adult_price"
+    t.string   "child_price"
+    t.string   "senior_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "routes", force: true do |t|
     t.string   "routenumber"

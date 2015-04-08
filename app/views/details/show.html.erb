@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stop number:</strong>
+  <%= @detail.stop_number %>
+</p>
+
+<p>
+  <strong>Stop name:</strong>
+  <%= @detail.stop_name %>
+</p>
+
+<p>
+  <strong>Stop location:</strong>
+  <%= @detail.stop_location %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @detail.area %>
+</p>
+
+<p>
+  <strong>Adult price:</strong>
+  <%= @detail.adult_price %>
+</p>
+
+<p>
+  <strong>Child price:</strong>
+  <%= @detail.child_price %>
+</p>
+
+<p>
+  <strong>Senior price:</strong>
+  <%= @detail.senior_price %>
+</p>
+
+<%= link_to 'Edit', edit_detail_path(@detail) %> |
+<%= link_to 'Back', details_path %>
