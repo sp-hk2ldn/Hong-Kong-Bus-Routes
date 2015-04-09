@@ -7,10 +7,12 @@ namespace :businfo do
 
     @routes = Route.all
     route_number = Array.new
-    @routes.each do |route|
-      route_number.push(route.routenumber.gsub(/\s+/, ""))
-    end
-    # puts route_number
+    # @routes.each do |route|
+    #   route_number.push(route.routenumber.gsub(/\s+/, ""))
+    # end
+
+    route_number << "1"
+    puts route_number
     #T is "forwards" and circular, R is reverse
     direction = ["T","R"]
 
@@ -33,20 +35,31 @@ namespace :businfo do
 
             stop_information = Hash.new
             for i in 0..tr.length - 1 do
-              stop = tr[i].css('td:nth-child(1)').text
-              bus_stop = tr[i].css('td:nth-child(2)').text
-              bus_stop_location = tr[i].css('td:nth-child(3)').text
-              area = tr[i].css('td:nth-child(4)').text
+              stop_number = tr[i].css('td:nth-child(1)').text
+              stop_name = tr[i].css('td:nth-child(2)').text
+              stop_location = tr[i].css('td:nth-child(3)').text
+              district = tr[i].css('td:nth-child(4)').text
               adult = tr[i].css('td:nth-child(5)').text
               child = tr[i].css('td:nth-child(6)').text
               senior = tr[i].css('td:nth-child(7)').text
-              if stop.length != 0 then
+              travel_direction = ""
+
+              if direction == "T" then
+                travel_direction = "ForwardRoute"
+              else
+                travel_direction = "BackwardRoute"
+              end
+              if stop_number.length != 0 then
+                stop_information["child_price"] = child
+                stop_information["adult_price"] = adult
+                stop_information["senior_price"] = senior
                 stop_information["route_id"] = route_number
-                stop_information["stop_number"] = stop
-                stop_information["stop name"] = bus_stop
-                stop_information["stop_location"] = bus_stop_location
-                stop_information["district"] = area
-                puts stop_information
+                stop_information["stop_number"] = stop_number
+                stop_information["stop_name"] = stop_name
+                stop_information["stop_location"] = stop_location
+                stop_information["area"] = district
+                stop_information["travel_direction"] = travel_direction
+                Detail.create(stop_information)
               end
             end            
           end

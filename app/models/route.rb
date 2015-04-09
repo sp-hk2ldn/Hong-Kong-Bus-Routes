@@ -1,3 +1,3 @@
 class Route < ActiveRecord::Base
-  has_one :detail
+  has_many :details
 end
