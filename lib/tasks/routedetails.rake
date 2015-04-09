@@ -7,12 +7,13 @@ namespace :businfo do
 
     @routes = Route.all
     route_number = Array.new
-    # @routes.each do |route|
-    #   route_number.push(route.routenumber.gsub(/\s+/, ""))
-    # end
+    # special = Array.new
+    @routes.each do |route|
+      route_number.push(route.routenumber.gsub(/\s+/, ""))
+      # special.push(route.special)
+    end
 
-    route_number << "1"
-    puts route_number
+    # route_number << "1"
     #T is "forwards" and circular, R is reverse
     direction = ["T","R"]
 
@@ -24,6 +25,7 @@ namespace :businfo do
 
 
     route_number.each do |route_number|
+    puts route_number
       direction.each do |direction|
         special.each do |special|
           company.each do |company|

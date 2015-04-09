@@ -4,7 +4,7 @@ class DetailsController < ApplicationController
   # GET /details
   # GET /details.json
   def index
-    @details = Detail.all
+    @details = Detail.all.sort
   end
 
   # GET /details/1

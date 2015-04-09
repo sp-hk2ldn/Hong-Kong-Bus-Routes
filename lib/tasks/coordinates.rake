@@ -42,9 +42,18 @@ namespace :businfo do
     url = "http://mobileapp.nwstbus.com.hk/nw/?l=1&f=0"
     document = open(url).read
     html_doc = Nokogiri::HTML(document)
-    @routes = Route.all
+    b = Watir::Browser.new :chrome
+    b.goto url
+    sleep 5
+    b.execute_script("gomenu(1)")
+    sleep 5
+    b.execute_script("search_cookie('X',document.ksearch.skey.value,0);")
+    sleep 5
+    @routes = Route.all.sort
+    binding.pry
     @routes.each do |route|
-      @route_details = Detail.where("route_id = " + route.id.to_s + " AND travel_direction = \'ForwardRoute\'").sort
+      @route_details = Detail.where("route_id = " + route.id.to_s).sort
+      # @route_details = Detail.where("route_id = " + route.id.to_s + " AND travel_direction = \'ForwardRoute\'").sort
       @route_details.each do |route_detail|
         if route_detail.travel_direction = "ForwardRoute" then
           direction = "\'T\'"
@@ -52,15 +61,11 @@ namespace :businfo do
           direction = "\'R\'"
         end
 
-        b = Watir::Browser.new :chrome
-        b.goto url
-        sleep 5
-        b.execute_script("gomenu(1)")
-        sleep 5
-        b.execute_script("search_cookie('X',document.ksearch.skey.value,0);")
-        sleep 5
-        b.execute_script("showroute('1   '," + direction.to_s + ",'D',true)")
-        sleep 5
+
+
+        # b.execute_script("showroute('1   '," + direction.to_s + ",'D',true)")
+        b.execute_script("showroute(' " + route.routenumber + "'," + direction.to_s + ",'D',true)")
+        sleep 1.5
         html_doc = Nokogiri::HTML.parse(b.html)
         css_incrementor = route_detail.stop_number.to_s
         lnglat = html_doc.css('#slist' + css_incrementor).attr('onclick').value
@@ -68,7 +73,9 @@ namespace :businfo do
         longitude = lnglat[33,17]
         route_detail.update(latitude: latitude)
         route_detail.update(longitude: longitude)
+
       end
+      b.close
     end
   end
 end

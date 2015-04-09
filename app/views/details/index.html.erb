@@ -10,6 +10,8 @@
       <th>Adult price</th>
       <th>Child price</th>
       <th>Senior price</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +26,8 @@
         <td><%= detail.adult_price %></td>
         <td><%= detail.child_price %></td>
         <td><%= detail.senior_price %></td>
+        <td><%= detail.latitude %></td>
+        <td><%= detail.longitude %></td>
         <td><%= link_to 'Show', detail %></td>
         <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
         <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
