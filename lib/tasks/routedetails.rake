@@ -7,8 +7,10 @@ namespace :businfo do
 
     @routes = Route.all
     route_number = Array.new
+    route_ids = Array.new
     # special = Array.new
     @routes.each do |route|
+      route_ids.push(route.id)
       route_number.push(route.routenumber.gsub(/\s+/, ""))
       # special.push(route.special)
     end
@@ -23,13 +25,11 @@ namespace :businfo do
     company = ["5","7"]
 
 
-
-    route_number.each do |route_number|
-    puts route_number
+    @routes.each do |route|
       direction.each do |direction|
         special.each do |special|
           company.each do |company|
-            url = "http://mobileapp.nwstbus.com.hk/text/getstopinroute.php?r=#{route_number}&d=#{direction}&v=#{special}&company=#{company}&from=routesearch&l=1"            
+            url = "http://mobileapp.nwstbus.com.hk/text/getstopinroute.php?r=" + route.routenumber.gsub(/\s+/, "") + "&d=#{direction}&v=#{special}&company=#{company}&from=routesearch&l=1"            
             document = open(url).read
             html_doc = Nokogiri::HTML(document)
             table = html_doc.css('table')[2]
@@ -55,13 +55,14 @@ namespace :businfo do
                 stop_information["child_price"] = child
                 stop_information["adult_price"] = adult
                 stop_information["senior_price"] = senior
-                stop_information["route_id"] = route_number
+                stop_information["route_id"] = route.id
                 stop_information["stop_number"] = stop_number
                 stop_information["stop_name"] = stop_name
                 stop_information["stop_location"] = stop_location
                 stop_information["area"] = district
                 stop_information["travel_direction"] = travel_direction
                 Detail.create(stop_information)
+                sleep(1.minute)
               end
             end            
           end
