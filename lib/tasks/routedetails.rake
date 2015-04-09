@@ -62,7 +62,8 @@ namespace :businfo do
                 stop_information["area"] = district
                 stop_information["travel_direction"] = travel_direction
                 Detail.create(stop_information)
-                sleep(1.minute)
+                puts stop_information
+                sleep(2)
               end
             end            
           end

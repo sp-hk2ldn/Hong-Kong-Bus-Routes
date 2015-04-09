@@ -50,7 +50,6 @@ namespace :businfo do
     b.execute_script("search_cookie('X',document.ksearch.skey.value,0);")
     sleep 5
     @routes = Route.all.sort
-    binding.pry
     @routes.each do |route|
       @route_details = Detail.where("route_id = " + route.id.to_s).sort
       # @route_details = Detail.where("route_id = " + route.id.to_s + " AND travel_direction = \'ForwardRoute\'").sort

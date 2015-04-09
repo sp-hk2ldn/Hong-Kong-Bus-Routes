@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  scope '/api' do
+    scope '/v1' do
+      resources :details, only: [:show, :index] do
+        get 'show'              , on: :member
+      end
+
+    end
+  end
   resources :details
 
   resources :routes
