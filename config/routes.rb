@@ -1,6 +1,8 @@
 require 'api_constraints'
 
 Busroutes::Application.routes.draw do
+  get 'welcome/index'
+
   devise_for :users
   namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api'}, path: '/' do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
@@ -10,4 +12,5 @@ Busroutes::Application.routes.draw do
     end
   end
 
+  root 'welcome#index'
 end
