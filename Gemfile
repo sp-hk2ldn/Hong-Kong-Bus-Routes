@@ -26,6 +26,8 @@ gem 'pg'
 
 #virtual browser
 gem 'watir-webdriver'
+
+gem 'devise'
         
 group :development do
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -46,6 +48,12 @@ group :production do
   gem 'rails_serve_static_assets'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+  gem 'shoulda-matchers'
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
