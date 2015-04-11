@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f2e6e89-7690-4cae-a4b1-e51def1c77a5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="busroutes.iws" />
@@ -72,8 +73,8 @@
       <file leaf-file-name="application.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38426965" vertical-offset="0" max-vertical-offset="1098">
-              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.3235955" vertical-offset="0" max-vertical-offset="1098">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -1171,8 +1172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38426965" vertical-offset="0" max-vertical-offset="1098">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.3235955" vertical-offset="0" max-vertical-offset="1098">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>

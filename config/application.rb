@@ -18,12 +18,12 @@ Bundler.require(*Rails.groups)
 #     'Access-Control-Allow-Origin' => 'http://localhost:3000',
 #     'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
 # }
-
-# PROD
-config.action_dispatch.default_headers = {
-    'Access-Control-Allow-Origin' => 'http://hkbusroutes.herokuapp.com',
-    'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
-}
+#
+# # PROD
+# config.action_dispatch.default_headers = {
+#     'Access-Control-Allow-Origin' => 'http://hkbusroutes.herokuapp.com',
+#     'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+# }
 
 module Busroutes
   class Application < Rails::Application
