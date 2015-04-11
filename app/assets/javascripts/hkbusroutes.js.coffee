@@ -14,12 +14,12 @@ App.controller("BusRoutesController", ["$scope", "$http", "$timeout", ($scope, $
   $scope.routes = []
 
   $scope.loadRoutes = ->
-  $http.get("api.hkbusroutes.dev/routes")
+  $http.get("/routes")
       .success (data) ->
         console.log data
         $scope.routes = data
       .error (data) ->
-        console.log "Error grabbing routes"
+        console.log "Error getting routes"
 
 
 
