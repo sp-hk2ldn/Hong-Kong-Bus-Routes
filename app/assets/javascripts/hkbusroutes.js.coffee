@@ -3,7 +3,7 @@ App = angular.module('hkBusRoutes', ['ngRoute', 'templates']);
 App.config([ '$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
   $routeProvider
     .when('/',
-      templateUrl: "/home/stephen/workspace/busroutes/app/assets/javascripts/templates/index.html"
+      templateUrl: "index.html"
     )
 
   $locationProvider.html5Mode(true)
@@ -14,7 +14,7 @@ App.controller("BusRoutesController", ["$scope", "$http", "$timeout", ($scope, $
   $scope.routes = []
 
   $scope.loadRoutes = ->
-  $http.get("api.hkbusroutes.dev:3000/routes")
+  $http.get("api.hkbusroutes.dev/routes")
       .success (data) ->
         console.log data
         $scope.routes = data
