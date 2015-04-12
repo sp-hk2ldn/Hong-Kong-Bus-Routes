@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Busroutes</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   
   <%= csrf_meta_tags %>
   <base href="/">
+  <%= javascript_include_tag 'application' %>
 </head>
 <body ng-app="hkBusRoutes">
       <div ng-include='"index.html"'></div>
 <%= yield %>
-  <%= javascript_include_tag 'application' %>
+
+
 </body>
 </html>

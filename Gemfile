@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -12,9 +12,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-gem 'nokogiri'
-gem 'angularjs-rails'
-gem 'angular-rails-templates'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -24,11 +21,26 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # PostgreSQL
 gem 'pg'
 
+#Angular Packages
+gem 'angularjs-rails'
+gem 'angular-rails-templates'
+gem 'angular-ui-bootstrap-rails'
+
+#Web Scraper
+gem 'nokogiri'
+
 #virtual browser
 gem 'watir-webdriver'
 
+#mapping, with AngularJS
+gem 'leaflet-rails'
+gem "angular-leaflet-rails"
+
+#Bootstrap
+gem 'bootstrap-sass', '~> 3.3.4'
+#Users
 gem 'devise'
-        
+
 group :development do
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

@@ -1,5 +1,24 @@
-<div ng-controller="BusRoutesController">
-    <div ng-repeat="route in routes">
-        <h3> {{ route.route_from_to }} </h3>
+<div ng-controller="CenterController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                    <form>
+                        Latitude : <input type="number" step="any" ng-model="center.lat">
+                        Longitude : <input type="number" step="any" ng-model="center.lng">
+                        Zoom : <input type="number" step="any" ng-model="center.zoom">
+                    </form>
+                    <leaflet id="map" center="center"></leaflet>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
     </div>
 </div>
+
+
+<!--<div ng-controller="BusRoutesController">-->
+    <!--<div ng-repeat="route in routes">-->
+        <!--<h3> {{ route.route_from_to }} </h3>-->
+    <!--</div>-->
+<!--</div>-->
