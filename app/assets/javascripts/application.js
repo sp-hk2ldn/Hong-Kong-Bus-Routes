@@ -17,5 +17,7 @@
 //= require angular-rails-templates
 //= require leaflet
 //= require angular-leaflet
-//= require angular-ui-bootstrap
+//= require angular-aria
+//= require angular-animate
+//= require angular-material
 //= require_tree .

@@ -6,6 +6,7 @@ gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -21,10 +22,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # PostgreSQL
 gem 'pg'
 
+#front end management
+gem 'bower-rails'
+
 #Angular Packages
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
-gem 'angular-ui-bootstrap-rails'
 
 #Web Scraper
 gem 'nokogiri'
@@ -36,8 +39,7 @@ gem 'watir-webdriver'
 gem 'leaflet-rails'
 gem "angular-leaflet-rails"
 
-#Bootstrap
-gem 'bootstrap-sass', '~> 3.3.4'
+
 #Users
 gem 'devise'
 

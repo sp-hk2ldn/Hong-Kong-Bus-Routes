@@ -18,6 +18,10 @@ class Api::V1::RoutesController < ApplicationController
     respond_with Route.all
   end
 
+  def route_from
+    respond_with Route.pluck("from_where")
+  end
+
   def route_params
     params.require(:route).permit(:route_from_to, :cost, :special, :direction)
   end

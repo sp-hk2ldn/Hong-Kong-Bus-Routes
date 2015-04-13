@@ -18,6 +18,15 @@
  *= require_self
  */
 
+@font-face {
+  font-family: 'Roboto';
+//  src: font-url('Roboto-Regular.ttf') format('truetype');
+//  src: font-url('Roboto-Medium.ttf') format('truetype');
+//  src: font-url('Roboto-ThinItalic.ttf') format('truetype');
+  src: font-url('Roboto-Thin.ttf') format('truetype');
+//  src: font-url('Roboto-Light.ttf') format('truetype');
+}
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+html,body {
+  font-family: 'Roboto';
+}

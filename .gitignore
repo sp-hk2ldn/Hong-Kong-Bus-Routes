@@ -33,3 +33,5 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+# Ignore Bower Assets
+/vendor/assets/components

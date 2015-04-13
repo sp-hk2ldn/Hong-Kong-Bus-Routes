@@ -1,0 +1,62 @@
+<div ng-controller="BusRoutesController" id="mainDiv">
+    <md-content>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+              <md-button class="md-fab md-primary" >
+                <md-icon class="ng-scope ng-isolate-scope md-default-theme hamburger-icon" style="height: 14px; width: 14px;" md-svg-src="/assets/icons/ic_menu_18px.svg"></md-icon>
+              </md-button>
+                <md-button class="md-icon-button" aria-label="Settings"></md-button>
+                <md-icon><svg style="color:red;font:bold;" class="md-icon-button" icon="/assets/icons/ic_menu_18px.svg" aria-label="Settings"></svg></md-icon>
+              <md-icon icon="/assets/icons/ic_menu_18px.svg"></md-icon>
+              <h1 class="md-display-4">Hong Kong BusRoute+</h1>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+    </md-content>
+
+</div>
+
+
+<!--<div layout="row">-->
+    <!--<div flex="33" style="background-color: #999999">-->
+        <!--[flex]-->
+    <!--</div>-->
+    <!--<div flex="33" style="background-color: #555555">-->
+        <!--[flex]-->
+    <!--</div>-->
+    <!--<div flex="33" style="background-color: #ccc">-->
+        <!--[flex]-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div layout="row">-->
+    <!--<div flex="33" style="background-color: #999999">-->
+        <!--[flex]-->
+    <!--</div>-->
+    <!--<div flex="33" style="background-color: #555555">-->
+        <!--[flex]-->
+    <!--</div>-->
+    <!--<div flex="33" style="background-color: #ccc">-->
+        <!--[flex]-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div ng-controller="BusRoutesController">
+
+    Search: <input ng-model="search">
+    <div ng-repeat="route in routes | filter | orderBy: 'id' | filter:search:strict">
+        <h3>From {{ route.from_where }}</h3>
+    </div>
+</div>
+
+
+<!--<div ng-controller="CenterController">-->
+    <!--<form>-->
+        <!--Latitude : <input type="number" step="any" ng-model="center.lat">-->
+        <!--Longitude : <input type="number" step="any" ng-model="center.lng">-->
+        <!--Zoom : <input type="number" step="any" ng-model="center.zoom">-->
+    <!--</form>-->
+    <!--<leaflet id="map" center="center"></leaflet>-->
+<!--</div>-->
+
+<!--<%= image_tag 'icons/ic_menu_18px.svg', :class => "hamburger-icon" %>-->

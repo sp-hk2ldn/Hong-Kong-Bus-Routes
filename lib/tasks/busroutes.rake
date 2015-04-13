@@ -30,18 +30,31 @@ namespace :businfo do
       company_type = a_href[index_of_company +8, 1]
 
 
-      #build hash to insert into database
-      
-      route_info["routenumber"] = f.css('tr').css('a')[$link_iterator].text()
-      route_info["route_from_to"] = f.css('tr').css('td[title="Route details"]')[$route_iterator].text()
-      route_info["cost"] = f.css('tr').css('td[title="($)Adult Fare"]')[$route_iterator].text()
-      route_info["special"] = special_type
-      route_info["direction"] = direction_type
-      route_info["company"] = company_type
-      $link_iterator +=1
-      $route_iterator +=1
-      Route.create(route_info)
-      puts route_info
+      #To Update Existing Data
+      @routes = Route.all.sort
+      @routes.each do |route|
+        #build hash to insert into database
+
+        route_info['routenumber'] = f.css('tr').css('a')[$link_iterator].text()
+        route_info['route_from_to'] = f.css('tr').css('td[title="Route details"]')[$route_iterator].text()
+        index_of_dashes = /--/ =~ route_info['route_from_to']
+        from_where = route_info['route_from_to'][0, index_of_dashes]
+        to_where = route_info['route_from_to'][index_of_dashes+2, route_info['route_from_to'].length]
+        route_info['from_where'] = from_where
+        route_info['to_where'] = to_where
+        route_info['cost'] = f.css('tr').css('td[title="($)Adult Fare"]')[$route_iterator].text()
+        route_info['special'] = special_type
+        route_info['direction'] = direction_type
+        route_info['company'] = company_type
+        $link_iterator +=1
+        $route_iterator +=1
+
+        #To Create new Data
+        #Route.create(route_info)
+        route.update(route_info)
+        route.update(route_info)
+        puts route_info
+      end
     end
   end
 end
