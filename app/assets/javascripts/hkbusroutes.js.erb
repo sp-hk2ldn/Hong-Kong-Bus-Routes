@@ -5,24 +5,109 @@ App = angular.module('hkBusRoutes', ['ngRoute', 'templates', 'leaflet-directive'
 App.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
-      templateUrl: "index.html"
+      templateUrl: "index.html.erb"
     });
   return $locationProvider.html5Mode(true);
   }
 ]);
 
+App.service('route',  function route($http, $q){
+    var route = this;
+    route.routeList = {};
+
+    route.getAllRoutes = function(){
+        var defer = $q.defer();
+
+        $http.get('/routes')
+                .success(function(response){
+                    route.routeList = response;
+                    defer.resolve(response);
+                })
+                .error(function(error, status){
+                    defer.reject(error);
+                });
+
+        return defer.promise;
+    };
+    return route;
+});
+
+App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log){
 
 
 
-App.controller("SimpleMapController", [ '$scope', function($scope) {
-  angular.extend($scope, {
-    defaults: {
-      scrollWheelZoom: false
+    // MAY NEED TO DEFINE A SEARCH SERVICE
+
+
+    $scope.init = function() {
+        $scope.getAll();
+    };
+
+    $scope.getAll = function(){
+        route.getAllRoutes()
+                .then(function(response){
+                    //success
+
+                    self.routes = response;
+                    return route.routeList;
+                    //OBJECTS ARE AVAILABLE HERE
+                }, function(error) {
+                    //error
+                }, function(message) {
+                    //message
+                });
+    };
+
+    var self = this;
+
+    self.selectedItem = null;
+    self.searchText = null;
+    self.querySearch = querySearch;
+    self.simulateQuery = false;
+    self.isDisabled = false;
+    self.selectedItemChange = selectedItemChange;
+    self.searchTextChange = searchTextChange;
+
+    function querySearch ($q) {
+        debugger;
+        var results = $q ? self.routes.filter(createFilterFor($q) ) : [],
+                deferred;
+        if (self.simulateQuery) {
+            deferred = $q.defer();
+            $timeout(function() { deferred.resolve( results ); }, Math.random() * 1000, false);
+        return deferred.promise;
+        } else {
+            return results;
+        }
     }
-  });
-}]);
+    function searchTextChange (text) {
+        $log.info('Text changed to ' + text);
+    }
+    function createFilterFor(query) {
+        var lowerCaseQuery = angular.lowercase(query);
+        return function FilterFn(route) {
+//            return (route.route_from_to.indexOf(lowerCaseQuery) === 0);
+            return (route.route_from_to.indexOf("K") === 0);
+        };
+    }
+    function selectedItemChange (item) {
+        $log.info('Item changed to ' + item);
+    }
 
-//App.controller("BusRoutesController", [
+    $scope.init();
+});
+//
+//
+//
+//App.controller("SimpleMapController", [ '$scope', function($scope) {
+//  angular.extend($scope, {
+//    defaults: {
+//      scrollWheelZoom: false
+//    }
+//  });
+//}]);
+//
+//App.controller("AllRouteInformationController", [
 //  "$scope", "$http", "$timeout", function($scope, $http, $timeout) {
 //    $scope.routes = [];
 //    $scope.loadRoutes = function() {};
@@ -35,31 +120,42 @@ App.controller("SimpleMapController", [ '$scope', function($scope) {
 //  return $scope.loadRoutes();
 //  }
 //]);
-
-App.controller("BusRoutesController", [
-        "$scope", "$http", "$timeout", function($scope, $http, $timeout){
-        $scope.routes = $http.get("/routes").success(function(data){
-            $scope.routes = data;
-        })
-    }
-])
-
-App.filter('selection', function($http) {
-    $scope.selection = $http.get("/routes").success(function(data){
-        $scope.selection = data;
-        console.log($scope.selection)
-    });
-})
-
-App.controller("CenterController", [ '$scope', function($scope) {
-    angular.extend($scope, {
-        center: {
-            lat: 40.095,
-            lng: -3.823,
-            zoom: 4
-        },
-        defaults: {
-            scrollWheelZoom: false
-        }
-    });
-}]);
+//
+////App.controller("RouteFromController", [
+////    "$scope", "$http", function($scope, $http, $filter) {
+////        $scope.arrVal = $http.get("/routes/route_from").success(function(data) {
+////            $scope.arrVal = data;
+////            return $scope.arrVal;
+////        }).error(function(data) {
+////            console.log("error")
+////        });
+////    }
+////]);
+//
+//
+//App.controller('RouteFromController', function ($scope, $filter, $http) {
+//    $scope.arrVal = $http.get("/routes/route_from").success(function(data){
+//        $scope.arrVal = data;
+//    }).error(function(data) {
+//        console.log("error")
+//    });
+//});
+//
+//App.filter('mySort', function(){
+//    return function(input) {
+//        return input.sort();
+//    }
+//});
+//
+//App.controller("CenterController", [ '$scope', function($scope) {
+//    angular.extend($scope, {
+//        center: {
+//            lat: 40.095,
+//            lng: -3.823,
+//            zoom: 4
+//        },
+//        defaults: {
+//            scrollWheelZoom: false
+//        }
+//    });
+//}]);

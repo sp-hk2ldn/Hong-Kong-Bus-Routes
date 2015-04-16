@@ -18,8 +18,12 @@ class Api::V1::RoutesController < ApplicationController
     respond_with Route.all
   end
 
-  def route_from
+  def route_from_all
     respond_with Route.pluck("from_where")
+  end
+
+  def route_from
+    respond_with Route.find(params[:id]).from_where
   end
 
   def route_params
