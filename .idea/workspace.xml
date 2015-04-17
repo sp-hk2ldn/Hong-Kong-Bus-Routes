@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f2e6e89-7690-4cae-a4b1-e51def1c77a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="busroutes.iws" />
@@ -41,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hkbusroutes.js.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hkbusroutes.js.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3048276" vertical-offset="1489" max-vertical-offset="3564">
-              <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+            <state vertical-scroll-proportion="-8.272727" vertical-offset="1381" max-vertical-offset="3564">
+              <caret line="102" column="63" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.07152318" vertical-offset="0" max-vertical-offset="792">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -85,7 +93,6 @@
         <option value="$PROJECT_DIR$/vendor/assets/bower_components/SassyLists/dist/_SassyLists.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.less" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
@@ -100,6 +107,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -325,7 +333,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Giftlist2" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="appl&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css.scss&#10;main&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;index.h&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html.erb&#10;routes&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/lib/tasks/busroutes.rake&#10;app rb&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/application.rb&#10;bowerfile&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Bowerfile&#10;assets&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/initializers/assets.rb&#10;gemfile&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Gemfile&#10;configurat&#9;null&#9;null&#10;gemfil&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Gemfile&#10;sass function&#9;null&#9;null&#10;main cs&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;index ht&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html&#10;app css&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css.scss&#10;hkbu&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/hkbusroutes.js&#10;app js&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/application.js&#10;application&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css&#10;applic&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/views/layouts/application.html.erb&#10;application.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/config/application.rb&#10;spec_help&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/spec_helper.rb&#10;route.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/factories/route.rb" />
+    <property name="SearchEverywhereHistoryKey" value="gitig&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/.gitignore&#10;appl&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css.scss&#10;main&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;index.h&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html.erb&#10;routes&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/lib/tasks/busroutes.rake&#10;app rb&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/application.rb&#10;bowerfile&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Bowerfile&#10;assets&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/initializers/assets.rb&#10;gemfile&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Gemfile&#10;configurat&#9;null&#9;null&#10;gemfil&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Gemfile&#10;sass function&#9;null&#9;null&#10;main cs&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;index ht&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html&#10;app css&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css.scss&#10;hkbu&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/hkbusroutes.js&#10;app js&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/application.js&#10;application&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css&#10;applic&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/views/layouts/application.html.erb&#10;application.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/config/application.rb&#10;spec_help&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/spec_helper.rb&#10;route.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/factories/route.rb" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -834,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.52" vertical-offset="60" max-vertical-offset="756">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="694">
@@ -1022,8 +1023,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3048276" vertical-offset="1489" max-vertical-offset="3564">
-          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+        <state vertical-scroll-proportion="-8.272727" vertical-offset="1381" max-vertical-offset="3564">
+          <caret line="102" column="63" selection-start-line="102" selection-start-column="63" selection-end-line="102" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07152318" vertical-offset="0" max-vertical-offset="792">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding />
         </state>
       </provider>
