@@ -29,19 +29,36 @@ App.service('route',  function route($http, $q){
 
         return defer.promise;
     };
+    route.getOneRoute = function(id){
+        var defer = $q.defer();
+
+        $http.get('/routes/' + id)
+                .success(function(response){
+                    route.currentRoute = response;
+                    defer.resolve(response);
+                })
+                .error(function(error, status){
+                    defer.reject(error);
+                });
+
+        return defer.promise;
+    };
+
     return route;
+
 });
 
-App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log){
-
-
-
-    // MAY NEED TO DEFINE A SEARCH SERVICE
-
+App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http){
 
     $scope.init = function() {
         $scope.getAll();
     };
+
+
+    $scope.containerForSingleRouteFunction = function(id) {
+        $scope.replacementSingleRouteFunction(id);
+    }
+
 
     $scope.getAll = function(){
         route.getAllRoutes()
@@ -50,7 +67,6 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log){
 
                     self.routes = response;
                     return route.routeList;
-                    //OBJECTS ARE AVAILABLE HERE
                 }, function(error) {
                     //error
                 }, function(message) {
@@ -58,18 +74,32 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log){
                 });
     };
 
-    var self = this;
+    $scope.getSingleRoute = function(id){
+        route.getOneRoute(id)
+                .then(function(response){
+                    //success
 
-    self.selectedItem = null;
+                    self.selectedItem = response;
+                    return route.currentRoute;
+                }, function(error) {
+                    console.log("errored");
+                    return;
+                    //error
+                }, function(message) {
+
+                });
+    };
+
+    var self = this;
     self.searchText = null;
     self.querySearch = querySearch;
-    self.simulateQuery = false;
+    self.simulateQuery = true;
     self.isDisabled = false;
     self.selectedItemChange = selectedItemChange;
     self.searchTextChange = searchTextChange;
+    self.selectedItem = null;
 
     function querySearch ($q) {
-        debugger;
         var results = $q ? self.routes.filter(createFilterFor($q) ) : [],
                 deferred;
         if (self.simulateQuery) {
@@ -86,13 +116,15 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log){
     function createFilterFor(query) {
         var lowerCaseQuery = angular.lowercase(query);
         return function FilterFn(route) {
-//            return (route.route_from_to.indexOf(lowerCaseQuery) === 0);
-            return (route.route_from_to.indexOf("K") === 0);
+            return (route.route_from_to.toLowerCase().indexOf(lowerCaseQuery) === 0);
         };
     }
     function selectedItemChange (item) {
-        $log.info('Item changed to ' + item);
+        $log.info('Item changed to ' + item.route_from_to);
+
+        console.log(self.selectedItem);
     }
+
 
     $scope.init();
 });
