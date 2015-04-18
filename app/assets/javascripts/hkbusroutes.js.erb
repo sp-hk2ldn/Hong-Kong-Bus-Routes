@@ -1,6 +1,6 @@
 var App;
 
-App = angular.module('hkBusRoutes', ['ngRoute', 'templates', 'leaflet-directive', 'ngAnimate', 'ngMaterial']);
+App = angular.module('hkBusRoutes', ['ngRoute', 'templates', 'ngAnimate', 'ngMaterial']);
 
 App.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -128,16 +128,3 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http){
 
     $scope.init();
 });
-
-App.controller("CenterController", [ '$scope', function($scope) {
-    angular.extend($scope, {
-        center: {
-            lat: 40.095,
-            lng: -3.823,
-            zoom: 8
-        },
-        defaults: {
-            scrollWheelZoom: false
-        }
-    });
-}]);

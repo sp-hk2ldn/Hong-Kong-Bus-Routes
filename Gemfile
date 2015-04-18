@@ -35,11 +35,6 @@ gem 'nokogiri'
 #virtual browser
 gem 'watir-webdriver'
 
-#mapping, with AngularJS
-gem 'leaflet-rails'
-gem "angular-leaflet-rails"
-
-
 #Users
 gem 'devise'
 
