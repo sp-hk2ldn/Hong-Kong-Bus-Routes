@@ -1,5 +1,5 @@
 <div ng-controller="RoutesCtrl as ctrl" id="mainDiv" layout="column">
-    <md-content>
+  <md-content>
         <md-toolbar>
             <div class="md-toolbar-tools header-color">
               <md-button class="md-fab md-primary button-color" >
@@ -10,7 +10,7 @@
             </div>
         </md-toolbar>
     </md-content>
-    <md-content layout-padding layout="column" class="autocomplete">
+  <md-content layout-padding layout="column" class="autocomplete">
       <form ng-submit="$event.preventDefault()">
         <md-autocomplete
             ng-disabled="ctrl.isDisabled"
@@ -20,65 +20,46 @@
             md-search-text="ctrl.searchText"
             md-selected-item-change="ctrl.selectedItemChange(item)"
             md-items="item in ctrl.querySearch(ctrl.searchText)"
-            md-item-text="item.route_from_to"
+            md-item-text="item.from_where + ' to ' + item.to_where"
             placeholder="Search for a route">
-          <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.route_from_to}}</span>
+          <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.from_where + ' to ' + item.to_where}}</span>
         </md-autocomplete>
       </form>
     </md-content>
 </div>
+<div ng-controller="CenterController">
+  <form>
+    Latitude : <input type="number" step="any" ng-model="center.lat">
+    Longitude : <input type="number" step="any" ng-model="center.lng">
+    Zoom : <input type="number" step="any" ng-model="center.zoom">
+  </form>
+  <leaflet id="map" center="center"></leaflet>
+</div>
 
 
 <!--<div layout="row">-->
-    <!--<div flex="33" style="background-color: #999999">-->
-        <!--[flex]-->
-    <!--</div>-->
-    <!--<div flex="33" style="background-color: #555555">-->
-        <!--[flex]-->
-    <!--</div>-->
-    <!--<div flex="33" style="background-color: #ccc">-->
-        <!--[flex]-->
-    <!--</div>-->
+<!--<div flex="33" style="background-color: #999999">-->
+<!--[flex]-->
+<!--</div>-->
+<!--<div flex="33" style="background-color: #555555">-->
+<!--[flex]-->
+<!--</div>-->
+<!--<div flex="33" style="background-color: #ccc">-->
+<!--[flex]-->
+<!--</div>-->
 <!--</div>-->
 <!--<div layout="row">-->
-    <!--<div flex="33" style="background-color: #999999">-->
-        <!--[flex]-->
-    <!--</div>-->
-    <!--<div flex="33" style="background-color: #555555">-->
-        <!--[flex]-->
-    <!--</div>-->
-    <!--<div flex="33" style="background-color: #ccc">-->
-        <!--[flex]-->
-    <!--</div>-->
+<!--<div flex="33" style="background-color: #999999">-->
+<!--[flex]-->
+<!--</div>-->
+<!--<div flex="33" style="background-color: #555555">-->
+<!--[flex]-->
+<!--</div>-->
+<!--<div flex="33" style="background-color: #ccc">-->
+<!--[flex]-->
+<!--</div>-->
 <!--</div>-->
 
-
-<!--<div ng-controller="AllRouteInformationController">-->
-  <!--<md-whiteframe class="md-whiteframe-z1" layout="" layout-align="center center">-->
-    <!--<span>Plan a Journey</span>-->
-  <!--</md-whiteframe>-->
-  <!--<div layout="column" class="ng-scope">-->
-
-    <!--<md-autocomplete placeholder="From" md-selected-item="selectedItem" md-search-text="searchFrom" md-items="route in routes(searchFrom)" md-item-text="route.from_where">-->
-      <!--<span md-highlight-text="searchText">{{route.from_where}}</span>-->
-    <!--</md-autocomplete>-->
-    <!--<md-autocomplete placeholder="To" md-selected-item="selectedItem" md-search-text="searchTo" md-items="route in routes(searchTo)" md-item-text="route.to_where">-->
-      <!--<span md-highlight-text="searchText">{{route.to_where}}</span>-->
-    <!--</md-autocomplete>-->
-
-
-  <!--</div>-->
-<!--</div>-->
-
-
-<!--<div ng-controller="CenterController">-->
-    <!--<form>-->
-        <!--Latitude : <input type="number" step="any" ng-model="center.lat">-->
-        <!--Longitude : <input type="number" step="any" ng-model="center.lng">-->
-        <!--Zoom : <input type="number" step="any" ng-model="center.zoom">-->
-    <!--</form>-->
-    <!--<leaflet id="map" center="center"></leaflet>-->
-<!--</div>-->
 
 <!--<%= image_tag 'icons/ic_menu_18px.svg', :class => "hamburger-icon" %>-->
 

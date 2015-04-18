@@ -99,8 +99,8 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http){
     self.searchTextChange = searchTextChange;
     self.selectedItem = null;
 
-    function querySearch ($q) {
-        var results = $q ? self.routes.filter(createFilterFor($q) ) : [],
+    function querySearch (q) {
+        var results = q ? self.routes.filter(createFilterFor(q) ) : [],
                 deferred;
         if (self.simulateQuery) {
             deferred = $q.defer();
@@ -128,66 +128,16 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http){
 
     $scope.init();
 });
-//
-//
-//
-//App.controller("SimpleMapController", [ '$scope', function($scope) {
-//  angular.extend($scope, {
-//    defaults: {
-//      scrollWheelZoom: false
-//    }
-//  });
-//}]);
-//
-//App.controller("AllRouteInformationController", [
-//  "$scope", "$http", "$timeout", function($scope, $http, $timeout) {
-//    $scope.routes = [];
-//    $scope.loadRoutes = function() {};
-//    $http.get("/routes").success(function(data) {
-//      console.log(data);
-//    return $scope.routes = data;
-//  }).error(function(data) {
-//    return console.log("Error getting routes");
-//  });
-//  return $scope.loadRoutes();
-//  }
-//]);
-//
-////App.controller("RouteFromController", [
-////    "$scope", "$http", function($scope, $http, $filter) {
-////        $scope.arrVal = $http.get("/routes/route_from").success(function(data) {
-////            $scope.arrVal = data;
-////            return $scope.arrVal;
-////        }).error(function(data) {
-////            console.log("error")
-////        });
-////    }
-////]);
-//
-//
-//App.controller('RouteFromController', function ($scope, $filter, $http) {
-//    $scope.arrVal = $http.get("/routes/route_from").success(function(data){
-//        $scope.arrVal = data;
-//    }).error(function(data) {
-//        console.log("error")
-//    });
-//});
-//
-//App.filter('mySort', function(){
-//    return function(input) {
-//        return input.sort();
-//    }
-//});
-//
-//App.controller("CenterController", [ '$scope', function($scope) {
-//    angular.extend($scope, {
-//        center: {
-//            lat: 40.095,
-//            lng: -3.823,
-//            zoom: 4
-//        },
-//        defaults: {
-//            scrollWheelZoom: false
-//        }
-//    });
-//}]);
+
+App.controller("CenterController", [ '$scope', function($scope) {
+    angular.extend($scope, {
+        center: {
+            lat: 40.095,
+            lng: -3.823,
+            zoom: 8
+        },
+        defaults: {
+            scrollWheelZoom: false
+        }
+    });
+}]);
