@@ -1,7 +1,9 @@
 *.rbc
 capybara-*.html
 .rspec
+.idea/workspace.xml
 /log
+/log/development.log
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
