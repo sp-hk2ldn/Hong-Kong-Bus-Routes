@@ -18,4 +18,6 @@
 //= require angular-aria
 //= require angular-animate
 //= require angular-material
+//= require leaflet
+//= require angular-leaflet-directive
 //= require_tree .

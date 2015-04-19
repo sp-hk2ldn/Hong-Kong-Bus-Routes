@@ -1,6 +1,6 @@
 var App;
 
-App = angular.module('hkBusRoutes', ['ngRoute', 'templates', 'ngAnimate', 'ngMaterial']);
+App = angular.module('hkBusRoutes', ['ngRoute', 'templates', 'ngAnimate', 'leaflet-directive', 'ngAria', 'ngMaterial']);
 
 App.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -11,8 +11,9 @@ App.config([
   }
 ]);
 
-App.service('route',  function route($http, $q){
-    var route = this;
+App.factory('route',  function($http, $q){
+//    var route = this;
+    var route = {};
     route.routeList = {};
 
     route.getAllRoutes = function(){
@@ -20,7 +21,6 @@ App.service('route',  function route($http, $q){
 
         $http.get('/routes')
                 .success(function(response){
-                    route.routeList = response;
                     defer.resolve(response);
                 })
                 .error(function(error, status){
@@ -29,18 +29,15 @@ App.service('route',  function route($http, $q){
 
         return defer.promise;
     };
-    route.getOneRoute = function(id){
+    route.singleRouteDetails = function(id){
         var defer = $q.defer();
 
-        $http.get('/routes/' + id)
-                .success(function(response){
-                    route.currentRoute = response;
+        $http.get('/details/' + id + '/route_details/').success(function(response){
                     defer.resolve(response);
                 })
                 .error(function(error, status){
                     defer.reject(error);
                 });
-
         return defer.promise;
     };
 
@@ -48,56 +45,51 @@ App.service('route',  function route($http, $q){
 
 });
 
-App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http){
+App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, leafletData){
+
+    angular.extend($scope, {
+        center: {
+            lat: 22.2783,
+            lng: 114.1747,
+            zoom: 18
+        }
+    });
 
     $scope.init = function() {
         $scope.getAll();
     };
 
 
-    $scope.containerForSingleRouteFunction = function(id) {
-        $scope.replacementSingleRouteFunction(id);
-    }
-
 
     $scope.getAll = function(){
         route.getAllRoutes()
                 .then(function(response){
                     //success
-
                     self.routes = response;
-                    return route.routeList;
                 }, function(error) {
                     //error
-                }, function(message) {
-                    //message
                 });
     };
 
-    $scope.getSingleRoute = function(id){
-        route.getOneRoute(id)
+    $scope.getRouteDetails = function(id) {
+        route.singleRouteDetails(id)
                 .then(function(response){
-                    //success
-
-                    self.selectedItem = response;
-                    return route.currentRoute;
+                    self.routeDetails = response;
+                    return route.routeDetails;
                 }, function(error) {
-                    console.log("errored");
-                    return;
                     //error
-                }, function(message) {
-
                 });
     };
 
     var self = this;
     self.searchText = null;
     self.querySearch = querySearch;
-    self.simulateQuery = true;
+    self.simulateQuery = false;
     self.isDisabled = false;
     self.selectedItemChange = selectedItemChange;
     self.searchTextChange = searchTextChange;
     self.selectedItem = null;
+
 
     function querySearch (q) {
         var results = q ? self.routes.filter(createFilterFor(q) ) : [],
@@ -110,21 +102,33 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http){
             return results;
         }
     }
+
+
     function searchTextChange (text) {
         $log.info('Text changed to ' + text);
     }
+
+
     function createFilterFor(query) {
         var lowerCaseQuery = angular.lowercase(query);
         return function FilterFn(route) {
             return (route.route_from_to.toLowerCase().indexOf(lowerCaseQuery) === 0);
         };
     }
+
+
     function selectedItemChange (item) {
-        $log.info('Item changed to ' + item.route_from_to);
+        if (item) {
+            $log.info('Item changed to ' + item.route_from_to);
+            $scope.getRouteDetails(item.id);
+            if ($scope.currentRouteDetails.length < 1) {
+                return
+            } else {
+                $scope.center.lat = parseFloat($scope.currentRouteDetails[0].latitude);
+                $scope.center.lng = parseFloat($scope.currentRouteDetails[0].longitude);
+            }
+        }
 
-        console.log(self.selectedItem);
     }
-
-
     $scope.init();
 });
