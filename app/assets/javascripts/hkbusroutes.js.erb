@@ -29,23 +29,21 @@ App.factory('route',  function($http, $q){
 
         return defer.promise;
     };
-    route.singleRouteDetails = function(id){
-        var defer = $q.defer();
 
-        $http.get('/details/' + id + '/route_details/').success(function(response){
-                    defer.resolve(response);
-                })
-                .error(function(error, status){
-                    defer.reject(error);
-                });
-        return defer.promise;
-    };
 
     return route;
 
 });
 
-App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, leafletData){
+App.factory('routeDetails', function($http){
+    return function(id) {
+        return $http.get('/details/' + id + '/route_details/').then(function (details) {
+            return details.data;
+        });
+    };
+});
+
+App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, leafletData, routeDetails){
 
     angular.extend($scope, {
         center: {
@@ -72,14 +70,17 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
     };
 
     $scope.getRouteDetails = function(id) {
-        route.singleRouteDetails(id)
+        routeDetails(id)
                 .then(function(response){
+                    debugger
                     self.routeDetails = response;
                     return route.routeDetails;
                 }, function(error) {
                     //error
                 });
     };
+
+
 
     var self = this;
     self.searchText = null;
@@ -120,13 +121,15 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
     function selectedItemChange (item) {
         if (item) {
             $log.info('Item changed to ' + item.route_from_to);
-            $scope.getRouteDetails(item.id);
-            if ($scope.currentRouteDetails.length < 1) {
-                return
-            } else {
-                $scope.center.lat = parseFloat($scope.currentRouteDetails[0].latitude);
-                $scope.center.lng = parseFloat($scope.currentRouteDetails[0].longitude);
-            }
+            routeDetails(item.id).then(function(data){
+                $scope.detailsArray = data;
+                if ($scope.detailsArray.length < 1){
+                    return
+                } else {
+                    $scope.center.lat = parseFloat($scope.detailsArray[0].latitude);
+                    $scope.center.lng = parseFloat($scope.detailsArray[0].longitude);
+                }
+            });
         }
 
     }

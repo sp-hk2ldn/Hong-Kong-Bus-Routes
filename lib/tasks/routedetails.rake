@@ -60,6 +60,7 @@ namespace :businfo do
           stop_information["travel_direction"] = travel_direction
           puts stop_information
           Detail.create(stop_information)
+          sleep(1.0/10.0)
         end
       end            
     end

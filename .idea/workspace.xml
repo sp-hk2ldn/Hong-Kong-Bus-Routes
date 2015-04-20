@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" line="127" mnemonic="4" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="4f2e6e89-7690-4cae-a4b1-e51def1c77a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bowerfile" afterPath="$PROJECT_DIR$/Bowerfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-bc91a47a485c76d6829c4a5c81e9eef9.js" afterPath="$PROJECT_DIR$/public/assets/application-bc91a47a485c76d6829c4a5c81e9eef9.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-d413df2c0272fc2156f58c644ea2f1a2.js" afterPath="$PROJECT_DIR$/public/assets/application-d413df2c0272fc2156f58c644ea2f1a2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/coordinates.rake" afterPath="$PROJECT_DIR$/lib/tasks/coordinates.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/routedetails.rake" afterPath="$PROJECT_DIR$/lib/tasks/routedetails.rake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -45,40 +36,38 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="900">
+            <state vertical-scroll-proportion="-0.11111111" vertical-offset="159" max-vertical-offset="900">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#md-toolbar#0;n#md-content#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hkbusroutes.js.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hkbusroutes.js.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37190083" vertical-offset="378" max-vertical-offset="2502">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.925926" vertical-offset="1802" max-vertical-offset="2556">
+              <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/routes_controller.rb">
+      <file leaf-file-name="coordinates.rake" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/coordinates.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.29449424" vertical-offset="598" max-vertical-offset="1530">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
+      <file leaf-file-name="routedetails.rake" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/routedetails.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="648">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1332">
+              <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -87,8 +76,18 @@
       <file leaf-file-name="details_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="648">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -107,7 +106,7 @@
       <file leaf-file-name=".bowerrc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/assets/.bowerrc">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="144">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -117,7 +116,7 @@
       <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/assets/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="252">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -127,7 +126,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/assets/bower_components/angular-material/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="882">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -180,12 +179,14 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/index.html" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss" />
         <option value="$PROJECT_DIR$/Bowerfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/routedetails.rake" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/coordinates.rake" />
       </list>
     </option>
   </component>
@@ -222,6 +223,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,11 +252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,15 +266,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
+              <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -290,19 +284,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-material" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -334,55 +320,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="busroutes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk_bus_routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="busroutes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk_bus_routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,63 +343,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="busroutes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk_bus_routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="busroutes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hk_bus_routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="bowerfile&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/Bowerfile&#10;main css&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;routes rb&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/config/routes.rb&#10;app html&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/views/layouts/application.html.erb&#10;main&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;bower&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/Bowerfile&#10;appl&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/config/application.rb&#10;app js&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/javascripts/application.js&#10;app css&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/stylesheets/application.css.scss&#10;leaflet&#9;null&#9;null&#10;gemfile&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/Gemfile&#10;devise.rb&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/initializers/devise.rb&#10;deve&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/log/development.log&#10;pids&#9;ACTION&#9;rake:tmp/pids&#10;index.h&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html.erb&#10;routes&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/lib/tasks/busroutes.rake&#10;app rb&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/application.rb&#10;assets&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/initializers/assets.rb&#10;configurat&#9;null&#9;null&#10;gemfil&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Gemfile&#10;sass function&#9;null&#9;null&#10;main cs&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;index ht&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html&#10;hkbu&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/hkbusroutes.js&#10;application&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css&#10;applic&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/views/layouts/application.html.erb&#10;application.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/config/application.rb&#10;spec_help&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/spec_helper.rb&#10;route.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/factories/route.rb" />
+    <property name="SearchEverywhereHistoryKey" value="details c&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/controllers/api/v1/details_controller.rb&#10;routes&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/config/routes.rb&#10;coord&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/lib/tasks/coordinates.rake&#10;bowerfile&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/Bowerfile&#10;main css&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;routes rb&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/config/routes.rb&#10;app html&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/views/layouts/application.html.erb&#10;main&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;bower&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/Bowerfile&#10;appl&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/config/application.rb&#10;app js&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/javascripts/application.js&#10;app css&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/app/assets/stylesheets/application.css.scss&#10;leaflet&#9;null&#9;null&#10;gemfile&#9;FILE&#9;file:///home/stephen/Documents/cloned-git-projects/hk_bus_routes/Gemfile&#10;devise.rb&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/initializers/devise.rb&#10;deve&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/log/development.log&#10;pids&#9;ACTION&#9;rake:tmp/pids&#10;index.h&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html.erb&#10;app rb&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/application.rb&#10;assets&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/config/initializers/assets.rb&#10;configurat&#9;null&#9;null&#10;gemfil&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/Gemfile&#10;sass function&#9;null&#9;null&#10;main cs&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/main.css.scss&#10;index ht&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/templates/index.html&#10;hkbu&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/javascripts/hkbusroutes.js&#10;application&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/assets/stylesheets/application.css&#10;applic&#9;FILE&#9;file:///home/stephen/workspace/hk_bus_routes/app/views/layouts/application.html.erb&#10;application.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/config/application.rb&#10;spec_help&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/spec_helper.rb&#10;route.rb&#9;FILE&#9;file:///home/stephen/workspace/busroutes/spec/factories/route.rb" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -644,28 +537,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1174" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2483721" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2483721" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2630458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2657082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2483721" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -685,9 +578,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18903089" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283721" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -713,14 +606,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1530">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
@@ -745,19 +630,19 @@
             <node x="" y="">nokogiri</node>
             <node x="" y="">sass-rails</node>
             <node x="" y="">actionmailer</node>
-            <node x="" y="">bcrypt</node>
             <node x="" y="">debug_inspector</node>
-            <node x="" y="">activerecord</node>
+            <node x="" y="">bcrypt</node>
             <node x="" y="">websocket</node>
+            <node x="" y="">activerecord</node>
             <node x="" y="">factory_girl_rails</node>
-            <node x="" y="">watir-webdriver</node>
             <node x="" y="">rails_12factor</node>
+            <node x="" y="">watir-webdriver</node>
             <node x="" y="">byebug</node>
             <node x="" y="">multi_json</node>
             <node x="" y="">ffi</node>
             <node x="" y="">rspec-expectations</node>
-            <node x="" y="">sdoc</node>
             <node x="" y="">factory_girl</node>
+            <node x="" y="">sdoc</node>
             <node x="" y="">mime-types</node>
             <node x="" y="">rails_serve_static_assets</node>
             <node x="" y="">railties</node>
@@ -783,15 +668,15 @@
             <node x="" y="">spring</node>
             <node x="" y="">sass</node>
             <node x="" y="">thread_safe</node>
-            <node x="" y="">json</node>
             <node x="" y="">rspec-rails</node>
+            <node x="" y="">json</node>
             <node x="" y="">sqlite3</node>
             <node x="" y="">erubis</node>
-            <node x="" y="">binding_of_caller</node>
             <node x="" y="">slop</node>
+            <node x="" y="">binding_of_caller</node>
             <node x="" y="">rack-test</node>
-            <node x="" y="">diff-lcs</node>
             <node x="" y="">shoulda-matchers</node>
+            <node x="" y="">diff-lcs</node>
             <node x="" y="">mail</node>
             <node x="" y="">jbuilder</node>
             <node x="" y="">pry</node>
@@ -805,10 +690,10 @@
             <node x="" y="">actionview</node>
             <node x="" y="">method_source</node>
             <node x="" y="">selenium-webdriver</node>
-            <node x="" y="">sprockets</node>
             <node x="" y="">activesupport</node>
-            <node x="" y="">uglifier</node>
+            <node x="" y="">sprockets</node>
             <node x="" y="">coffee-rails</node>
+            <node x="" y="">uglifier</node>
             <node x="" y="">devise</node>
             <node x="" y="">angularjs-rails</node>
             <node x="" y="">i18n</node>
@@ -977,13 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/coordinates.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.83923703" vertical-offset="616" max-vertical-offset="1512">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.6/lib/action_controller/metal/mime_responds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33197278" vertical-offset="6758" max-vertical-offset="9954">
@@ -1030,7 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4770">
           <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,7 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="414">
           <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="612">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41485274" vertical-offset="0" max-vertical-offset="781">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8348271" vertical-offset="86" max-vertical-offset="1134">
           <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,15 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4609475" vertical-offset="0" max-vertical-offset="781">
           <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="648">
+        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="648">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -1149,6 +1013,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0921895" vertical-offset="0" max-vertical-offset="781">
           <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.925926" vertical-offset="1802" max-vertical-offset="2556">
+          <caret line="127" column="24" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/routedetails.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1332">
+          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1156,25 +1035,31 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/details_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="900">
+        <state vertical-scroll-proportion="-0.11111111" vertical-offset="159" max-vertical-offset="900">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#div#0;n#md-toolbar#0;n#md-content#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/hkbusroutes.js.erb">
+    <entry file="file://$PROJECT_DIR$/lib/tasks/coordinates.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37190083" vertical-offset="378" max-vertical-offset="2502">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29449424" vertical-offset="598" max-vertical-offset="1530">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>

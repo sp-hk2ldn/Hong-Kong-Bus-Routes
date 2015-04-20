@@ -13,7 +13,7 @@ Busroutes::Application.routes.draw do
         get 'route_from_all',     on: :collection
       end
       resources :users, :only => [:show]
-      resources :details, :only => [:show, :route_details] do
+      resources :details, :only => [:show, :route_details, :index] do
         get 'route_details',      on: :member
       end
     end

@@ -9,4 +9,8 @@ class Api::V1::DetailsController < ApplicationController
     respond_with Detail.where(route_id: params[:id])
   end
 
+  def index
+    respond_with Detail.all
+  end
+
 end

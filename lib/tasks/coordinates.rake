@@ -43,7 +43,8 @@ namespace :businfo do
     @routes.each do |route|
       b = Watir::Browser.new :chrome
       check_if_coordinates_present = Detail.where(route_id: route.id)
-      if check_if_coordinates_present.last.latitude == nil then
+      puts check_if_coordinates_present.id
+      if check_if_coordinates_present.last.latitude == null then
         puts check_if_coordinates_present
         url = "http://mobileapp.nwstbus.com.hk/nw/?l=1&f=0"
         document = open(url).read
@@ -73,7 +74,7 @@ namespace :businfo do
       end
 
       end
-      b.close 
+      b.close
     end
   end
 end
