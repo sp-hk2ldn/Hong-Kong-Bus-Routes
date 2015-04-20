@@ -11,6 +11,9 @@
  * file per style scope.
  *= require leaflet
  *= require angular-material
+ *= require font-awesome
+ *= require Leaflet.awesome-markers/dist/leaflet.awesome-markers
+ *= require Leaflet.extra-markers/src/leaflet.extra-markers.css
  *= require_tree .
  *= require_self
  */

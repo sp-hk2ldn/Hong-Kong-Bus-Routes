@@ -21,4 +21,6 @@
 //= require leaflet
 //= require angular-leaflet-directive
 //= require leaflet-plugins/layer/tile/Google
+//= require Leaflet.awesome-markers/dist/leaflet.awesome-markers
+//= require Leaflet.extra-markers/src/leaflet.extra-markers
 //= require_tree .

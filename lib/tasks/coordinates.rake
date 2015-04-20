@@ -62,7 +62,7 @@ namespace :businfo do
 
           # b.execute_script("showroute('1   '," + direction.to_s + ",'D',true)")
           b.execute_script("showroute(' " + route.routenumber + "'," + direction + "," + special + ",true)")
-          sleep 1
+          sleep 2.5
           html_doc = Nokogiri::HTML.parse(b.html)
           css_incrementor = route_detail.stop_number.to_s
           lnglat = html_doc.css('#slist' + css_incrementor).attr('onclick').value
