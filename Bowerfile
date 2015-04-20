@@ -5,3 +5,4 @@
 asset 'angular-material', '0.9.0-rc1-master-c964609'
 asset 'material-design-icons'
 asset 'angular-leaflet-directive'
+asset 'leaflet-plugins'

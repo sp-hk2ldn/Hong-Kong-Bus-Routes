@@ -12,7 +12,6 @@ App.config([
 ]);
 
 App.factory('route',  function($http, $q){
-//    var route = this;
     var route = {};
     route.routeList = {};
 
@@ -43,22 +42,71 @@ App.factory('routeDetails', function($http){
     };
 });
 
-App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, leafletData, routeDetails){
+App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, leafletData, routeDetails, leafletBoundsHelpers){
+
+
+
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+            $scope.$apply(function(){
+                $scope.position = position;
+                $scope.bounds = leafletBoundsHelpers.createBoundsFromArray([
+                    [ position.coords.latitude, position.coords.longitude ],
+                    [ position.coords.latitude, position.coords.longitude ]
+                ]);
+                $scope.markers.push({ lat: position.coords.latitude, lng: position.coords.longitude });
+                console.log($scope.markers);
+            })
+        })
+    }
 
     angular.extend($scope, {
+
+        layers: {
+            baselayers: {
+                googleRoadmap: {
+                    name: 'Google Streets',
+                    layerType: 'ROADMAP',
+                    type: 'google'
+                }
+            }
+        },
+
         center: {
-            lat: 22.2783,
-            lng: 114.1747,
-            zoom: 18
-        }
+//            lat: 22.2783,
+//            lng: 114.1747,
+//            zoom: 16
+        },
+
+        bounds: $scope.bounds
+
+//        myPosition: {
+//            lat: 0,
+//            lng: 0
+//        },
+
+//        markers: {
+////            initialStopMarker: {
+////                lat: null,
+////                lng: null
+////            },
+////            lastStopMarker: {
+////                lat:null,
+////                lng:null
+////            }
+//        }
     });
+
+    $scope.markers = new Array();
+
+
 
     $scope.init = function() {
         $scope.getAll();
     };
 
 
-
+//get all routes
     $scope.getAll = function(){
         route.getAllRoutes()
                 .then(function(response){
@@ -69,6 +117,7 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
                 });
     };
 
+//get route stops
     $scope.getRouteDetails = function(id) {
         routeDetails(id)
                 .then(function(response){
@@ -121,16 +170,28 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
     function selectedItemChange (item) {
         if (item) {
             $log.info('Item changed to ' + item.route_from_to);
-            routeDetails(item.id).then(function(data){
-                $scope.detailsArray = data;
-                if ($scope.detailsArray.length < 1){
-                    return
-                } else {
-                    $scope.center.lat = parseFloat($scope.detailsArray[0].latitude);
-                    $scope.center.lng = parseFloat($scope.detailsArray[0].longitude);
-                }
-            });
+            routeDetails(item.id)
+                    .then(function(data){
+                        $scope.detailsArray = data;
+                        if ($scope.detailsArray.length >= 1) {
+        //                    $scope.center.lat = parseFloat($scope.detailsArray[0].latitude);
+        //                    $scope.center.lng = parseFloat($scope.detailsArray[0].longitude);
+
+                            $scope.markers.length = 0;
+                            $scope.markers.push({lat: parseFloat($scope.detailsArray[0].latitude), lng: parseFloat($scope.detailsArray[0].longitude)})
+                            $scope.markers.push({lat: parseFloat($scope.detailsArray[$scope.detailsArray.length - 1].latitude), lng: parseFloat($scope.detailsArray[$scope.detailsArray.length - 1].longitude)})
+
+                            $scope.bounds.northEast.lat = parseFloat($scope.detailsArray[0].latitude);
+                            $scope.bounds.northEast.lng = parseFloat($scope.detailsArray[0].longitude);
+                            $scope.bounds.southWest.lng = parseFloat($scope.detailsArray[$scope.detailsArray.length - 1].longitude);
+                            $scope.bounds.southWest.lat = parseFloat($scope.detailsArray[$scope.detailsArray.length - 1].latitude);
+                        }
+                    });
         }
+        console.log($scope.bounds);
+        leafletData.getMap().then(function(map){
+            console.log(map.getBounds());
+        });
 
     }
     $scope.init();

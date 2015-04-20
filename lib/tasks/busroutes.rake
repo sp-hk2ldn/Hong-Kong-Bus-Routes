@@ -1,3 +1,7 @@
+# REMEMBER TO CHECK WHETHER YOU'RE UPDATING OR CREATING ROUTE DATA
+
+
+
 namespace :businfo do
   desc "Scrape Routes"
 
@@ -31,8 +35,8 @@ namespace :businfo do
 
 
       #To Update Existing Data
-      @routes = Route.all.sort
-      @routes.each do |route|
+      # @routes = Route.all.sort
+      # @routes.each do |route|
         #build hash to insert into database
 
         route_info['routenumber'] = f.css('tr').css('a')[$link_iterator].text()
@@ -50,11 +54,11 @@ namespace :businfo do
         $route_iterator +=1
 
         #To Create new Data
-        #Route.create(route_info)
-        route.update(route_info)
-        route.update(route_info)
+        Route.create(route_info)
+        # route.update(route_info)
+        # route.update(route_info)
         puts route_info
-      end
+      # end
     end
   end
 end

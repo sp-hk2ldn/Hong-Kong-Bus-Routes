@@ -20,4 +20,5 @@
 //= require angular-material
 //= require leaflet
 //= require angular-leaflet-directive
+//= require leaflet-plugins/layer/tile/Google
 //= require_tree .

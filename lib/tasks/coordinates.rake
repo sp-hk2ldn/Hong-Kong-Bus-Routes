@@ -41,10 +41,9 @@ namespace :businfo do
 
     @routes = Route.all.sort
     @routes.each do |route|
-      b = Watir::Browser.new :chrome
       check_if_coordinates_present = Detail.where(route_id: route.id)
-      puts check_if_coordinates_present.id
-      if check_if_coordinates_present.last.latitude == null then
+      if check_if_coordinates_present.last.latitude == nil then
+        b = Watir::Browser.new :chrome
         puts check_if_coordinates_present
         url = "http://mobileapp.nwstbus.com.hk/nw/?l=1&f=0"
         document = open(url).read
@@ -63,7 +62,7 @@ namespace :businfo do
 
           # b.execute_script("showroute('1   '," + direction.to_s + ",'D',true)")
           b.execute_script("showroute(' " + route.routenumber + "'," + direction + "," + special + ",true)")
-          sleep 0.5
+          sleep 1
           html_doc = Nokogiri::HTML.parse(b.html)
           css_incrementor = route_detail.stop_number.to_s
           lnglat = html_doc.css('#slist' + css_incrementor).attr('onclick').value
@@ -71,10 +70,10 @@ namespace :businfo do
           longitude = lnglat[33,17]
           route_detail.update(latitude: latitude)
           route_detail.update(longitude: longitude)
-      end
+          b.close
+        end
 
       end
-      b.close
     end
   end
 end
