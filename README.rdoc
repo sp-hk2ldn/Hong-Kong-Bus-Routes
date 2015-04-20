@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project to make a site similar to http://www.nwstbus.com.hk/.
 
-Things you may want to cover:
+I have created this project to teach myself more about creating RESTful API's with Ruby on Rails, Data Scraping with Nokogiri and AngularJS.
 
-* Ruby version
+I am also using Google's Angular-Material design library in this project, and Leaflet, two other technologies that I have not used before.
 
-* System dependencies
+It is intentionally mobile first, the end goal is to wrap the site into an .apk and actually use the app on a regular basis (I do not use nwstbus's app because it kills my battery from a constantly on GPS bug).
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you have any advice or contributions to make please get in touch.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ruby Version: 2.1.2p95
+Rails: 4.1.6
+Database: pgSQL
+
+Front end management tool: Bower
+
+In order to run the scrapers:
+
+
+rake businfo:routes
+rake businfo:details
+rake businfo:coordinates
+
+You may need to adjust some of the sleep times for the scraping, nwst can be quick to drop the banhammer.
+
+All information taken from nwstbus for non-commercial purposes.
+
+
