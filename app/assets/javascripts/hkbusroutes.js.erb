@@ -55,10 +55,8 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
                     [ position.coords.latitude, position.coords.longitude ]
                 ]);
 
-//                $scope.markers = {myPosition: {lat: position.coords.latitude, lng: position.coords.longitude, message:"This is you!", icon: { type: 'awesomeMarker', icon: 'tag', markerColor: 'green' } }};
-                $scope.markers = {myPosition: {lat: position.coords.latitude, lng: position.coords.longitude, message:"This is you!", icon: { type: 'extraMarker', shape: 'star', icon: 'tag', markerColor: 'orange' } }};
-
-//                  icon: 'fa-star', markerColor: 'red'
+//                $scope.markers = {myPosition: {lat: position.coords.latitude, lng: position.coords.longitude, message:"This is you!", icon: { type: 'extraMarker', shape: 'star', icon: 'tag', markerColor: 'orange' } }};
+                    $scope.markers.push({lat: position.coords.latitude, lng: position.coords.longitude, message:"This is you!", icon: { type: 'awesomeMarker', icon: 'tag', markerColor: 'orange' } });
                 console.log($scope.markers);
             })
         })
@@ -82,12 +80,13 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
 //            zoom: 16
         },
 
-        bounds: $scope.bounds
+        bounds: $scope.bounds,
+        markers: []
 
 
     });
 
-    $scope.markers = new Array();
+//    $scope.markers = new Array();
 
 
 
@@ -164,10 +163,28 @@ App.controller("RoutesCtrl", function($scope, route, $timeout, $q, $log, $http, 
                     .then(function(data){
                         $scope.detailsArray = data;
                         if ($scope.detailsArray.length >= 1) {
-
-                            //populate route start and end markers
-                            $scope.markers.startingStop = {lat: parseFloat($scope.detailsArray[0].latitude), lng: parseFloat($scope.detailsArray[0].longitude), message: "The first stop"};
-                            $scope.markers.finalStop= {lat: parseFloat($scope.detailsArray[$scope.detailsArray.length - 1].latitude), lng: parseFloat($scope.detailsArray[$scope.detailsArray.length - 1].longitude), message: "The last stop"};
+                            $scope.markers.length = 1;
+                            for (i = 0; i < $scope.detailsArray.length; i++){
+                                if (i === 0){
+                                    $scope.markers.push({
+                                        lat: parseFloat($scope.detailsArray[i].latitude),
+                                        lng: parseFloat($scope.detailsArray[i].longitude),
+                                        message: 'The first stop: ' + $scope.detailsArray[i].stop_name
+                                    });
+                                } else if (i === $scope.detailsArray.length -1) {
+                                    $scope.markers.push({
+                                        lat: parseFloat($scope.detailsArray[i].latitude),
+                                        lng: parseFloat($scope.detailsArray[i].longitude),
+                                        message: 'The last stop: ' + $scope.detailsArray[i].stop_name
+                                    });
+                                } else {
+                                    $scope.markers.push({
+                                        lat: parseFloat($scope.detailsArray[i].latitude),
+                                        lng: parseFloat($scope.detailsArray[i].longitude),
+                                        message: $scope.detailsArray[i].stop_name
+                                    });
+                                }
+                            }
 
 
                             console.log($scope.markers)

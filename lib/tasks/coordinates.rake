@@ -70,9 +70,9 @@ namespace :businfo do
           longitude = lnglat[33,17]
           route_detail.update(latitude: latitude)
           route_detail.update(longitude: longitude)
-          b.close
-        end
 
+        end
+        b.close
       end
     end
   end
